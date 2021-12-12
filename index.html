@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contador</title>
+        <title>Meu Contador</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: grid;
+                place-items: center;
+                height: 100vh;
+                background-color: lightblue
+                     
+            }
+            div{
+                text-align: center;
+                background-color: lightseagreen;
+                color: whitesmoke;
+                padding: 30px;
+                border-radius: 10px;
+            }
+            p {
+                font-size: 100px;
+
+            }
+        </style>
     </head>
     <body>
-
+        <div>
+            <h1>Contador</h1>
+            <p>0</p>
+            <button onclick="subtrair()">Menos</button>
+            <button onclick="somar()">Mais</button>
+        </div>    
     </body>
+    <script>
+        let numero = 0
+
+        function somar() {
+            numero = numero + 1
+            mostrar()           
+        }
+        function subtrair() {
+            numero = numero - 1
+            mostrar()
+        }
+
+        function mostrar() {
+            const p = document.querySelector("p")
+            p.innerText = numero
+        }
+       
+    </script>
 </html>
